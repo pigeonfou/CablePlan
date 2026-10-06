@@ -1,0 +1,11 @@
+CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT UNIQUE NOT NULL, password_hash TEXT NOT NULL, role TEXT NOT NULL CHECK(role IN ('admin','user')), active INTEGER NOT NULL DEFAULT 1);
+CREATE TABLE sessions (token_hash TEXT PRIMARY KEY, user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE, csrf TEXT NOT NULL, expires REAL NOT NULL);
+CREATE TABLE projects (id TEXT PRIMARY KEY, owner_id INTEGER NOT NULL REFERENCES users(id), name TEXT NOT NULL, reference TEXT NOT NULL DEFAULT '', client TEXT NOT NULL DEFAULT '', description TEXT NOT NULL DEFAULT '', archived INTEGER NOT NULL DEFAULT 0, updated TEXT NOT NULL, created TEXT NOT NULL);
+CREATE TABLE assemblies (id TEXT PRIMARY KEY, project_id TEXT NOT NULL REFERENCES projects(id) ON DELETE CASCADE, name TEXT NOT NULL, version INTEGER NOT NULL DEFAULT 1, data TEXT NOT NULL);
+CREATE TABLE library (id TEXT PRIMARY KEY, kind TEXT NOT NULL, name TEXT NOT NULL, data TEXT NOT NULL);
+CREATE TABLE site_settings (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+INSERT INTO site_settings VALUES ('allow_tunnel_access','false');
+INSERT INTO site_settings VALUES ('public_url','');
+CREATE TABLE audit_log (id INTEGER PRIMARY KEY, date TEXT NOT NULL, user_id INTEGER REFERENCES users(id), action TEXT NOT NULL, detail TEXT NOT NULL);
+CREATE TABLE revisions (id TEXT PRIMARY KEY, assembly_id TEXT NOT NULL REFERENCES assemblies(id) ON DELETE CASCADE, code TEXT NOT NULL, date TEXT NOT NULL, user_id INTEGER NOT NULL REFERENCES users(id), description TEXT NOT NULL, snapshot TEXT NOT NULL);
+CREATE TABLE login_attempts (key TEXT PRIMARY KEY, count INTEGER NOT NULL, window REAL NOT NULL);

@@ -1,0 +1,35 @@
+[Unit]
+Description=CablePlan — conception locale de câblage
+After=network.target
+
+[Service]
+Type=simple
+User=cableplan
+Group=www-data
+WorkingDirectory=/opt/cableplan/current
+EnvironmentFile=/etc/cableplan/cableplan.env
+Environment=CABLEPLAN_PROXY_MODE=nginx
+Environment=CABLEPLAN_DATA=/var/lib/cableplan
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONNOUSERSITE=1
+RuntimeDirectory=cableplan
+RuntimeDirectoryMode=0750
+UMask=0007
+ExecStart=/opt/cableplan/current/.venv/bin/cableplan serve --uds /run/cableplan/app.sock
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/cableplan /run/cableplan
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+IPAddressDeny=any
+IPAddressAllow=localhost
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+LockPersonality=true
+
+[Install]
+WantedBy=multi-user.target

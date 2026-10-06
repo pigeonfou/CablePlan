@@ -1,0 +1,378 @@
+{
+  "properties": {},
+  "connectors": [
+    {
+      "properties": {},
+      "id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+      "reference": "J1",
+      "definition_id": null,
+      "designation": "",
+      "manufacturer": "",
+      "part_number": "",
+      "gender": "",
+      "view": "solder",
+      "orientation": 0.0,
+      "side": "left",
+      "x": 0.0,
+      "y": 0.0,
+      "pins": [
+        {
+          "properties": {},
+          "id": "26076f76-dc88-490e-841e-028da5f3eb06",
+          "name": "A",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "8d27d2a1-c1dd-46ed-b18a-c499af27ecfd",
+          "name": "B",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "85ded0cb-4330-4156-8008-874243776a19",
+          "name": "C",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "3633f5b2-63f3-4913-b193-58098f3c57ad",
+          "name": "D",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "c214186a-e2c2-4624-ba25-3d8c025aa413",
+          "name": "E",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "ab8a4b5e-05bb-4ab5-922a-4734b45b6de7",
+          "name": "F",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        }
+      ],
+      "comment": ""
+    },
+    {
+      "properties": {},
+      "id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+      "reference": "J2",
+      "definition_id": null,
+      "designation": "",
+      "manufacturer": "",
+      "part_number": "",
+      "gender": "",
+      "view": "solder",
+      "orientation": 0.0,
+      "side": "right",
+      "x": 0.0,
+      "y": 0.0,
+      "pins": [
+        {
+          "properties": {},
+          "id": "977168b6-a71e-461e-a641-6ebae1a96d54",
+          "name": "A",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "856c24d3-c607-4c15-bedd-30cc355aeed2",
+          "name": "B",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "1be2cbe8-68f9-4c8e-83d5-3722ef70839d",
+          "name": "C",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "b8580375-7df7-42f2-b22e-86d30bb70187",
+          "name": "D",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "d8b20800-4792-40e3-af74-2a8e8584e2d8",
+          "name": "E",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        },
+        {
+          "properties": {},
+          "id": "ec97805c-fef8-4441-902a-7ba2a87e6a36",
+          "name": "F",
+          "function": "",
+          "contact_reference": "",
+          "comment": "",
+          "x": null,
+          "y": null
+        }
+      ],
+      "comment": ""
+    }
+  ],
+  "connections": [
+    {
+      "properties": {},
+      "id": "0f24b8fc-8375-4c6a-ae2e-2841e1905add",
+      "start": {
+        "connector_id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+        "pin_id": "26076f76-dc88-490e-841e-028da5f3eb06"
+      },
+      "end": {
+        "connector_id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+        "pin_id": "977168b6-a71e-461e-a641-6ebae1a96d54"
+      },
+      "conductor": {
+        "properties": {},
+        "id": "65bb431c-773e-488b-bb7c-466afdde16de",
+        "color": "#eeeeee",
+        "color_name": "Blanc",
+        "awg": 22,
+        "section_mm2": null,
+        "length": 350.0,
+        "unit": "mm",
+        "material": "Cuivre",
+        "insulation": "",
+        "outer_diameter": null,
+        "manufacturer": "",
+        "part_number": "",
+        "reference": "",
+        "marker": "",
+        "comment": "",
+        "strip_start_mm": 0.0,
+        "strip_end_mm": 0.0,
+        "termination_start": "",
+        "termination_end": "",
+        "contact_start": "",
+        "contact_end": "",
+        "twisted": false,
+        "group": "",
+        "voltage": null,
+        "current": null
+      }
+    },
+    {
+      "properties": {},
+      "id": "a6092bee-463b-4c9e-854f-9790f5de5012",
+      "start": {
+        "connector_id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+        "pin_id": "8d27d2a1-c1dd-46ed-b18a-c499af27ecfd"
+      },
+      "end": {
+        "connector_id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+        "pin_id": "856c24d3-c607-4c15-bedd-30cc355aeed2"
+      },
+      "conductor": {
+        "properties": {},
+        "id": "55dc3fd2-4a7a-4b31-9585-671757d7ca90",
+        "color": "#df3434",
+        "color_name": "Rouge",
+        "awg": 22,
+        "section_mm2": null,
+        "length": 350.0,
+        "unit": "mm",
+        "material": "Cuivre",
+        "insulation": "",
+        "outer_diameter": null,
+        "manufacturer": "",
+        "part_number": "",
+        "reference": "",
+        "marker": "",
+        "comment": "",
+        "strip_start_mm": 0.0,
+        "strip_end_mm": 0.0,
+        "termination_start": "",
+        "termination_end": "",
+        "contact_start": "",
+        "contact_end": "",
+        "twisted": false,
+        "group": "",
+        "voltage": null,
+        "current": null
+      }
+    },
+    {
+      "properties": {},
+      "id": "6b1bc422-5d9c-47b9-b37e-67a5973eb7b7",
+      "start": {
+        "connector_id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+        "pin_id": "ab8a4b5e-05bb-4ab5-922a-4734b45b6de7"
+      },
+      "end": {
+        "connector_id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+        "pin_id": "ec97805c-fef8-4441-902a-7ba2a87e6a36"
+      },
+      "conductor": {
+        "properties": {},
+        "id": "80d4c5dd-ca51-4ab2-b891-ad40da020409",
+        "color": "#202733",
+        "color_name": "Noir",
+        "awg": 22,
+        "section_mm2": null,
+        "length": 350.0,
+        "unit": "mm",
+        "material": "Cuivre",
+        "insulation": "",
+        "outer_diameter": null,
+        "manufacturer": "",
+        "part_number": "",
+        "reference": "",
+        "marker": "",
+        "comment": "",
+        "strip_start_mm": 0.0,
+        "strip_end_mm": 0.0,
+        "termination_start": "",
+        "termination_end": "",
+        "contact_start": "",
+        "contact_end": "",
+        "twisted": false,
+        "group": "",
+        "voltage": null,
+        "current": null
+      }
+    },
+    {
+      "properties": {},
+      "id": "fe9b72c2-1e20-4229-9b5b-96e3856ab2fc",
+      "start": {
+        "connector_id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+        "pin_id": "85ded0cb-4330-4156-8008-874243776a19"
+      },
+      "end": {
+        "connector_id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+        "pin_id": "1be2cbe8-68f9-4c8e-83d5-3722ef70839d"
+      },
+      "conductor": {
+        "properties": {},
+        "id": "cd4c94ab-26f4-42e5-819d-39c57bcf04c7",
+        "color": "#2977cc",
+        "color_name": "Bleu",
+        "awg": 22,
+        "section_mm2": null,
+        "length": 350.0,
+        "unit": "mm",
+        "material": "Cuivre",
+        "insulation": "",
+        "outer_diameter": null,
+        "manufacturer": "",
+        "part_number": "",
+        "reference": "",
+        "marker": "",
+        "comment": "",
+        "strip_start_mm": 0.0,
+        "strip_end_mm": 0.0,
+        "termination_start": "",
+        "termination_end": "",
+        "contact_start": "",
+        "contact_end": "",
+        "twisted": false,
+        "group": "",
+        "voltage": null,
+        "current": null
+      }
+    }
+  ],
+  "shields": [
+    {
+      "properties": {},
+      "id": "ae7a9c13-4c76-45d0-bf0b-bf53b56b8342",
+      "designation": "Blindage",
+      "start": {
+        "connector_id": "a29546a0-1675-4be6-9518-ddc47ebf6f5a",
+        "pin_id": null
+      },
+      "end": {
+        "connector_id": "c7bdaa31-9dd4-40e2-968d-3095e83511bb",
+        "pin_id": null
+      },
+      "length_mm": 320.0,
+      "material": "Cuivre étamé",
+      "kind": "Tresse",
+      "reference": "",
+      "manufacturer": "",
+      "diameter_mm": null,
+      "coverage": null,
+      "comment": ""
+    }
+  ],
+  "sheaths": [
+    {
+      "properties": {},
+      "id": "5a4711c3-6a2d-4891-b5c8-6fa0630ed0fe",
+      "designation": "Gaine",
+      "length_mm": 300.0,
+      "start_mm": 25.0,
+      "diameter_mm": null,
+      "color": "Noir",
+      "material": "",
+      "reference": "",
+      "manufacturer": "",
+      "comment": ""
+    }
+  ],
+  "accessories": [],
+  "drawing": {
+    "properties": {},
+    "designation": "Câble ZN2219",
+    "cable_reference": "",
+    "drawing_number": "CP-001",
+    "revision": "0",
+    "creator": "Atelier",
+    "validated_by": "",
+    "validation_date": "",
+    "length_mm": 350.0,
+    "tolerance_plus_mm": 0.0,
+    "tolerance_minus_mm": 0.0,
+    "measurement": "Entre terminaisons",
+    "comment": ""
+  },
+  "allow_shared_pins": false
+}
