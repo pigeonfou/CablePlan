@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "id": "cableplan",
+  "integration": "native-isolated",
+  "frontend": "nginx",
+  "hostname": "cableplan.pigeonfou.com"
+}
