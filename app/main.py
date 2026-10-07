@@ -10,7 +10,7 @@ from uuid import uuid4
 from argon2 import PasswordHasher
 from argon2.exceptions import VerificationError
 from fastapi import Depends, FastAPI, HTTPException, Request, Response
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, HTMLResponse
 from pydantic import BaseModel, ConfigDict, Field
 
 from . import __version__, drawing
@@ -129,7 +129,10 @@ class RevisionInput(BaseModel):
 
 def create_app():
     migrate()
-    api = FastAPI(title="CablePlan", version=__version__, docs_url=None, redoc_url=None, openapi_url=None)
+    base = os.environ.get("CABLEPLAN_BASE_PATH", "").rstrip("/")
+    if base and (not base.startswith("/") or any(c not in "/abcdefghijklmnopqrstuvwxyz0123456789_-" for c in base)):
+        raise ValueError("CABLEPLAN_BASE_PATH invalide")
+    api = FastAPI(root_path=base, title="CablePlan", version=__version__, docs_url=None, redoc_url=None, openapi_url=None)
     # This is a trusted reverse-proxy deployment using a Unix socket. No public backend port.
     trusted_channel = os.environ.get("CABLEPLAN_PROXY_MODE", "direct") == "nginx"
 
@@ -168,7 +171,7 @@ def create_app():
 
     @api.get("/")
     def index():
-        return FileResponse(STATIC / "index.html")
+        return HTMLResponse((STATIC / "index.html").read_text().replace("__BASE_PATH__", base))
 
     @api.get("/static/{filename}")
     def static(filename: str):
@@ -253,7 +256,7 @@ def create_app():
             httponly=True,
             secure=secure,
             samesite="strict",
-            path="/",
+            path=base + "/",
         )
         return {"username": row["username"], "role": row["role"], "csrf": csrf}
 
@@ -264,7 +267,7 @@ def create_app():
                 "DELETE FROM sessions WHERE token_hash=?",
                 (hash_token(request.cookies.get("cableplan_session", "")),),
             )
-        response.delete_cookie("cableplan_session", path="/")
+        response.delete_cookie("cableplan_session", path=base + "/")
         return {"ok": True}
 
     @api.get("/api/me")
@@ -527,3 +530,4 @@ def create_app():
         return {"ok": True}
 
     return api
+
