@@ -42,3 +42,10 @@ python -m pytest -q
 ```
 
 Voir les limites de la V0.1 et le suivi de validation dans [docs/STATUS.md](docs/STATUS.md).
+
+## Deux modes d’installation
+
+- Serveur dédié : [installation Ubuntu 24/26](docs/INSTALL_UBUNTU.md), branche `main`.
+- Instance gérée : [OneForAll](docs/ONEFORALL.md), branche `main`.
+
+Les comptes de service, chemins de données et helpers sont distincts ; utiliser uniquement la chaîne de mise à jour du mode choisi.
